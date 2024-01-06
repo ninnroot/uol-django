@@ -10,11 +10,11 @@ from app_auth.serializers import UserSerializer
 class Command(BaseCommand):
 
     def create_genre(self, genre_name: str):
-        if not Genre.objects.filter(name=genre_name.lower()).exists():
+        if not Genre.objects.filter(name=genre_name.lower().strip()).exists():
             genre = Genre(name=genre_name.lower())
             genre.save()
             return genre
-        return Genre.objects.filter(name=genre_name.lower()).first()
+        return Genre.objects.filter(name=genre_name.lower().strip()).first()
 
     def create_author(self, author_name: str):
         if not Author.objects.filter(name=author_name).exists():
