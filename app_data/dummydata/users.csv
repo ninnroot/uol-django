@@ -1,0 +1,2 @@
+email,password,name,is_staff,is_superuser
+superadmin@dad-lib.com,Password123$,Super Admin,True,True
