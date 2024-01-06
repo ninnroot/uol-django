@@ -146,3 +146,6 @@ SIMPLE_JWT = {
     "USER_ID_FIELD": "email",
 }
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://dad-lib.thiha.net"
+]
